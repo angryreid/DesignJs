@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>单体模式</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    // 设计模式:
+    // 设计模式的作用-提高代码的重用性,可读性,使代码更容易维护和扩展.
+    // 1.重点掌握单体模式,工厂模式,桥梁模式,是一个优秀的前端必须掌握的模式,有利于抽象编程以及接口编程.
+    // 单体模式用来划分命名空间
+    // 可以减少网页中全局变量的数量,可以再多人开发而时候避免冲突.
+
+    // 使用:
+    // 使用单体模式的方法就是使用一个命名空间包含自己所有的代码全局对象
+    var functionGroup = {
+        name: 'DengXiang',
+        method: function() {
+            // code
+        },
+        init: function() {
+            // code
+        }
+    };
+
+    // 第二种书写格式
+    var functionGroup2 = new myGroup(){
+        this.name = 'DengXiang',
+        this.getName = function(){
+            return this.name;
+        },
+        this.method = function(){
+            // code
+        }
+    };
+    </script>
+</body>
+
+</html>

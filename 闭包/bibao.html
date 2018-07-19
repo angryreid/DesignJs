@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+</head>
+<body>
+    <script type="text/javascript">
+        // 1.闭包最常用的就是返回一个内联函数
+        // 2.内联函数就是在函数内部申明的函数
+        // 3.js中有作用域和执行环境的问题,在函数内部的变量外部是无法访问的,在函数内部却可以得到全局变量
+        function fun(){
+            var n = 99;
+            // 定义第一种闭包的样式,内联函数
+            function fun2(){
+                console.log(n+=1);
+            }
+            return fun2;
+        }
+
+        function noName(){
+            var name = 'dengxiang';
+            // 定义第二种闭包的样式
+            return function(){
+                console.log(name)
+            }
+        }
+
+        var result = fun();
+        var result2 = fun();
+        result();//100
+        result();//101
+        result();//102
+
+        // 主要不同函数之间调用，根据每一个函数的作用的工作空间
+        result2();///100
+
+        var showName = noName();
+        showName();
+    </script>
+</body>
+</html>
