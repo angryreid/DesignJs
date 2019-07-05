@@ -18,4 +18,4 @@ Singleton.getInstance = (function() {
 let s1 = Singleton.getInstance();
 let s2 = Singleton.getInstance();
 
-console.log(s1 === s2);Í
+console.log(s1 === s2);
